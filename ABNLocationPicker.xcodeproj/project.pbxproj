@@ -7,21 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D62C04492B8770B200F4B8AA /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04482B8770B200F4B8AA /* LocationsListView.swift */; };
+		D62C044B2B877AF900F4B8AA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D62C044A2B877AF900F4B8AA /* Localizable.xcstrings */; };
+		D62C04532B87941D00F4B8AA /* ABNLocationPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04522B87941D00F4B8AA /* ABNLocationPickerTests.swift */; };
+		D62C045A2B87943D00F4B8AA /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04592B87943D00F4B8AA /* LocationServiceTests.swift */; };
+		D62C045C2B87944D00F4B8AA /* LocationsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C045B2B87944D00F4B8AA /* LocationsViewModelTests.swift */; };
+		D62C045F2B8794B400F4B8AA /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C045E2B8794B400F4B8AA /* MockLocationService.swift */; };
+		D62C04622B879B8C00F4B8AA /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04612B879B8C00F4B8AA /* Double+Extension.swift */; };
+		D62C04642B879E2100F4B8AA /* MockAppChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04632B879E2100F4B8AA /* MockAppChecker.swift */; };
+		D62C04662B87A2BA00F4B8AA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04652B87A2BA00F4B8AA /* String+Extension.swift */; };
+		D62C04682B87A2D900F4B8AA /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04672B87A2D900F4B8AA /* CLLocationCoordinate2D+Extension.swift */; };
+		D62C046B2B87B4AE00F4B8AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C046A2B87B4AE00F4B8AA /* Constants.swift */; };
+		D62C046D2B87B58900F4B8AA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C046C2B87B58900F4B8AA /* Logger.swift */; };
+		D62C046F2B87B9D500F4B8AA /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C046E2B87B9D500F4B8AA /* MockLocationManager.swift */; };
+		D62C04722B87CFA600F4B8AA /* LocationsViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04712B87CFA600F4B8AA /* LocationsViewModelImpl.swift */; };
+		D62C04752B87D91F00F4B8AA /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C04742B87D91F00F4B8AA /* LocationCell.swift */; };
 		D68515B42B83D7240048B42A /* ABNLocationPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68515B32B83D7240048B42A /* ABNLocationPickerApp.swift */; };
 		D68515B62B83D7240048B42A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68515B52B83D7240048B42A /* ContentView.swift */; };
 		D68515B82B83D7250048B42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68515B72B83D7250048B42A /* Assets.xcassets */; };
 		D68515BB2B83D7250048B42A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68515BA2B83D7250048B42A /* Preview Assets.xcassets */; };
+		D68515C22B83D9FF0048B42A /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = D68515C12B83D9FF0048B42A /* locations.json */; };
+		D6E4A31F2B861AF000405212 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A31E2B861AF000405212 /* MapView.swift */; };
+		D6E4A3242B866C0200405212 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A3232B866C0200405212 /* Location.swift */; };
+		D6E4A32A2B8670FE00405212 /* LocationsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A3292B8670FE00405212 /* LocationsContainerView.swift */; };
+		D6E4A32D2B86720F00405212 /* WikiAppCheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A32C2B86720F00405212 /* WikiAppCheckerService.swift */; };
+		D6E4A3302B86723C00405212 /* NoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A32F2B86723C00405212 /* NoAppView.swift */; };
+		D6E4A3342B867FA000405212 /* LocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A3332B867FA000405212 /* LocationsService.swift */; };
+		D6E4A3372B86805000405212 /* ABNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A3362B86805000405212 /* ABNError.swift */; };
+		D6E4A3392B8680D700405212 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A3382B8680D700405212 /* LocationsViewModel.swift */; };
+		D6E4A33B2B86945B00405212 /* WikipediaPlacesLinkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A33A2B86945B00405212 /* WikipediaPlacesLinkBuilder.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D62C04542B87941D00F4B8AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D68515A82B83D7240048B42A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D68515AF2B83D7240048B42A;
+			remoteInfo = ABNLocationPicker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D62C04482B8770B200F4B8AA /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
+		D62C044A2B877AF900F4B8AA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		D62C04502B87941D00F4B8AA /* ABNLocationPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNLocationPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62C04522B87941D00F4B8AA /* ABNLocationPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABNLocationPickerTests.swift; sourceTree = "<group>"; };
+		D62C04592B87943D00F4B8AA /* LocationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceTests.swift; sourceTree = "<group>"; };
+		D62C045B2B87944D00F4B8AA /* LocationsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModelTests.swift; sourceTree = "<group>"; };
+		D62C045E2B8794B400F4B8AA /* MockLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
+		D62C04612B879B8C00F4B8AA /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		D62C04632B879E2100F4B8AA /* MockAppChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppChecker.swift; sourceTree = "<group>"; };
+		D62C04652B87A2BA00F4B8AA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D62C04672B87A2D900F4B8AA /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
+		D62C04692B87B21600F4B8AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D62C046A2B87B4AE00F4B8AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D62C046C2B87B58900F4B8AA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		D62C046E2B87B9D500F4B8AA /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
+		D62C04712B87CFA600F4B8AA /* LocationsViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModelImpl.swift; sourceTree = "<group>"; };
+		D62C04742B87D91F00F4B8AA /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		D68515B02B83D7240048B42A /* ABNLocationPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABNLocationPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68515B32B83D7240048B42A /* ABNLocationPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABNLocationPickerApp.swift; sourceTree = "<group>"; };
 		D68515B52B83D7240048B42A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D68515B72B83D7250048B42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D68515BA2B83D7250048B42A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D68515C12B83D9FF0048B42A /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		D6E4A31E2B861AF000405212 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D6E4A3232B866C0200405212 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D6E4A3292B8670FE00405212 /* LocationsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsContainerView.swift; sourceTree = "<group>"; };
+		D6E4A32C2B86720F00405212 /* WikiAppCheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAppCheckerService.swift; sourceTree = "<group>"; };
+		D6E4A32F2B86723C00405212 /* NoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoAppView.swift; sourceTree = "<group>"; };
+		D6E4A3332B867FA000405212 /* LocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsService.swift; sourceTree = "<group>"; };
+		D6E4A3362B86805000405212 /* ABNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABNError.swift; sourceTree = "<group>"; };
+		D6E4A3382B8680D700405212 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		D6E4A33A2B86945B00405212 /* WikipediaPlacesLinkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPlacesLinkBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D62C044D2B87941D00F4B8AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D68515AD2B83D7240048B42A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -32,10 +101,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D62C04512B87941D00F4B8AA /* ABNLocationPickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D62C045D2B8794A300F4B8AA /* Mocks */,
+				D62C04522B87941D00F4B8AA /* ABNLocationPickerTests.swift */,
+				D62C04592B87943D00F4B8AA /* LocationServiceTests.swift */,
+				D62C045B2B87944D00F4B8AA /* LocationsViewModelTests.swift */,
+			);
+			path = ABNLocationPickerTests;
+			sourceTree = "<group>";
+		};
+		D62C045D2B8794A300F4B8AA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D62C045E2B8794B400F4B8AA /* MockLocationService.swift */,
+				D62C04632B879E2100F4B8AA /* MockAppChecker.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D62C04602B879B7A00F4B8AA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D62C04612B879B8C00F4B8AA /* Double+Extension.swift */,
+				D62C04652B87A2BA00F4B8AA /* String+Extension.swift */,
+				D62C04672B87A2D900F4B8AA /* CLLocationCoordinate2D+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D62C04702B87CF8600F4B8AA /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A3292B8670FE00405212 /* LocationsContainerView.swift */,
+				D6E4A3382B8680D700405212 /* LocationsViewModel.swift */,
+				D62C04712B87CFA600F4B8AA /* LocationsViewModelImpl.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		D62C04732B87D8F300F4B8AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A31E2B861AF000405212 /* MapView.swift */,
+				D62C04482B8770B200F4B8AA /* LocationsListView.swift */,
+				D62C04742B87D91F00F4B8AA /* LocationCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D62C04762B87F67600F4B8AA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D68515B32B83D7240048B42A /* ABNLocationPickerApp.swift */,
+				D68515B52B83D7240048B42A /* ContentView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D62C04772B87F68300F4B8AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D62C044A2B877AF900F4B8AA /* Localizable.xcstrings */,
+				D68515B72B83D7250048B42A /* Assets.xcassets */,
+				D68515C12B83D9FF0048B42A /* locations.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D68515A72B83D7240048B42A = {
 			isa = PBXGroup;
 			children = (
 				D68515B22B83D7240048B42A /* ABNLocationPicker */,
+				D62C04512B87941D00F4B8AA /* ABNLocationPickerTests */,
 				D68515B12B83D7240048B42A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				D68515B02B83D7240048B42A /* ABNLocationPicker.app */,
+				D62C04502B87941D00F4B8AA /* ABNLocationPickerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +191,14 @@
 		D68515B22B83D7240048B42A /* ABNLocationPicker */ = {
 			isa = PBXGroup;
 			children = (
-				D68515B32B83D7240048B42A /* ABNLocationPickerApp.swift */,
-				D68515B52B83D7240048B42A /* ContentView.swift */,
-				D68515B72B83D7250048B42A /* Assets.xcassets */,
+				D62C04692B87B21600F4B8AA /* Info.plist */,
+				D62C04772B87F68300F4B8AA /* Resources */,
+				D62C04762B87F67600F4B8AA /* Application */,
+				D62C04602B879B7A00F4B8AA /* Extension */,
+				D6E4A32E2B86723100405212 /* UI */,
+				D6E4A32B2B8671ED00405212 /* Core */,
+				D6E4A3252B86709E00405212 /* Screens */,
+				D6E4A3222B866BF700405212 /* Model */,
 				D68515B92B83D7250048B42A /* Preview Content */,
 			);
 			path = ABNLocationPicker;
@@ -67,9 +212,74 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D6E4A3222B866BF700405212 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A3232B866C0200405212 /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6E4A3252B86709E00405212 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A3262B8670AB00405212 /* LocationsList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D6E4A3262B8670AB00405212 /* LocationsList */ = {
+			isa = PBXGroup;
+			children = (
+				D62C04732B87D8F300F4B8AA /* Views */,
+				D62C04702B87CF8600F4B8AA /* Screen */,
+			);
+			path = LocationsList;
+			sourceTree = "<group>";
+		};
+		D6E4A32B2B8671ED00405212 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A32C2B86720F00405212 /* WikiAppCheckerService.swift */,
+				D6E4A3332B867FA000405212 /* LocationsService.swift */,
+				D6E4A3362B86805000405212 /* ABNError.swift */,
+				D6E4A33A2B86945B00405212 /* WikipediaPlacesLinkBuilder.swift */,
+				D62C046C2B87B58900F4B8AA /* Logger.swift */,
+				D62C046E2B87B9D500F4B8AA /* MockLocationManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D6E4A32E2B86723100405212 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A32F2B86723C00405212 /* NoAppView.swift */,
+				D62C046A2B87B4AE00F4B8AA /* Constants.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D62C044F2B87941D00F4B8AA /* ABNLocationPickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D62C04562B87941D00F4B8AA /* Build configuration list for PBXNativeTarget "ABNLocationPickerTests" */;
+			buildPhases = (
+				D62C044C2B87941D00F4B8AA /* Sources */,
+				D62C044D2B87941D00F4B8AA /* Frameworks */,
+				D62C044E2B87941D00F4B8AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D62C04552B87941D00F4B8AA /* PBXTargetDependency */,
+			);
+			name = ABNLocationPickerTests;
+			productName = ABNLocationPickerTests;
+			productReference = D62C04502B87941D00F4B8AA /* ABNLocationPickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D68515AF2B83D7240048B42A /* ABNLocationPicker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D68515BE2B83D7250048B42A /* Build configuration list for PBXNativeTarget "ABNLocationPicker" */;
@@ -97,6 +307,10 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					D62C044F2B87941D00F4B8AA = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = D68515AF2B83D7240048B42A;
+					};
 					D68515AF2B83D7240048B42A = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -116,16 +330,26 @@
 			projectRoot = "";
 			targets = (
 				D68515AF2B83D7240048B42A /* ABNLocationPicker */,
+				D62C044F2B87941D00F4B8AA /* ABNLocationPickerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D62C044E2B87941D00F4B8AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D68515AE2B83D7240048B42A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D68515BB2B83D7250048B42A /* Preview Assets.xcassets in Resources */,
+				D68515C22B83D9FF0048B42A /* locations.json in Resources */,
+				D62C044B2B877AF900F4B8AA /* Localizable.xcstrings in Resources */,
 				D68515B82B83D7250048B42A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,18 +357,90 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D62C044C2B87941D00F4B8AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62C045F2B8794B400F4B8AA /* MockLocationService.swift in Sources */,
+				D62C04642B879E2100F4B8AA /* MockAppChecker.swift in Sources */,
+				D62C045A2B87943D00F4B8AA /* LocationServiceTests.swift in Sources */,
+				D62C045C2B87944D00F4B8AA /* LocationsViewModelTests.swift in Sources */,
+				D62C04532B87941D00F4B8AA /* ABNLocationPickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D68515AC2B83D7240048B42A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E4A3342B867FA000405212 /* LocationsService.swift in Sources */,
+				D62C04722B87CFA600F4B8AA /* LocationsViewModelImpl.swift in Sources */,
+				D6E4A33B2B86945B00405212 /* WikipediaPlacesLinkBuilder.swift in Sources */,
+				D62C04682B87A2D900F4B8AA /* CLLocationCoordinate2D+Extension.swift in Sources */,
+				D6E4A3372B86805000405212 /* ABNError.swift in Sources */,
+				D6E4A32D2B86720F00405212 /* WikiAppCheckerService.swift in Sources */,
+				D62C04752B87D91F00F4B8AA /* LocationCell.swift in Sources */,
+				D62C04622B879B8C00F4B8AA /* Double+Extension.swift in Sources */,
 				D68515B62B83D7240048B42A /* ContentView.swift in Sources */,
+				D62C046B2B87B4AE00F4B8AA /* Constants.swift in Sources */,
+				D62C046D2B87B58900F4B8AA /* Logger.swift in Sources */,
+				D6E4A3302B86723C00405212 /* NoAppView.swift in Sources */,
+				D6E4A3242B866C0200405212 /* Location.swift in Sources */,
+				D62C04662B87A2BA00F4B8AA /* String+Extension.swift in Sources */,
+				D62C04492B8770B200F4B8AA /* LocationsListView.swift in Sources */,
+				D6E4A32A2B8670FE00405212 /* LocationsContainerView.swift in Sources */,
+				D62C046F2B87B9D500F4B8AA /* MockLocationManager.swift in Sources */,
+				D6E4A31F2B861AF000405212 /* MapView.swift in Sources */,
 				D68515B42B83D7240048B42A /* ABNLocationPickerApp.swift in Sources */,
+				D6E4A3392B8680D700405212 /* LocationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D62C04552B87941D00F4B8AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D68515AF2B83D7240048B42A /* ABNLocationPicker */;
+			targetProxy = D62C04542B87941D00F4B8AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D62C04572B87941D00F4B8AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivedeneev.ABNLocationPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABNLocationPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABNLocationPicker";
+			};
+			name = Debug;
+		};
+		D62C04582B87941D00F4B8AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivedeneev.ABNLocationPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABNLocationPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABNLocationPicker";
+			};
+			name = Release;
+		};
 		D68515BC2B83D7250048B42A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -274,6 +570,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ABNLocationPicker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ABNLocationPicker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +599,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ABNLocationPicker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ABNLocationPicker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,6 +621,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D62C04562B87941D00F4B8AA /* Build configuration list for PBXNativeTarget "ABNLocationPickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62C04572B87941D00F4B8AA /* Debug */,
+				D62C04582B87941D00F4B8AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D68515AB2B83D7240048B42A /* Build configuration list for PBXProject "ABNLocationPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
