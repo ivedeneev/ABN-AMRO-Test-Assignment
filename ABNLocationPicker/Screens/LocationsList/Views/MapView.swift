@@ -16,6 +16,7 @@ struct MapView: View {
     // Initially hardcoded NL camera position for demo purposes
     @State private var position = MapCameraPosition.automatic
     
+    /// We dont want to update cameraPosition in ViewModel directly because it will trigger onUpdate and camera will be set automatically. It could interfere with user interaction and lead to poor UX.
     @State private var lastCameraPosition: CLLocationCoordinate2D?
     @State private var selectedNewLocation: CLLocationCoordinate2D?
     @State private var selectedLocation: Location?
@@ -42,8 +43,9 @@ struct MapView: View {
                      selectedNewLocation = pinLocation
                  }
             }
+            // Unfortunately, this overlaps with Marker tap gestures and causes a minor visual glitch (see https://stackoverflow.com/questions/74675989/how-to-have-ontap-gestures-on-map-and-mapannotation-both-without-the-two-interf)
             .onMapCameraChange(frequency: .onEnd) { context in
-                lastCameraPosition = context.camera.centerCoordinate // We dont want to update cameraPosition in ViewModel directly because it will trigger onUpdate and camera will be set automatically. It could interfere with user interaction and lead to poor UX.
+                lastCameraPosition = context.camera.centerCoordinate
             }
         }
         .onChange(of: selectedLocation) { _, loc in
