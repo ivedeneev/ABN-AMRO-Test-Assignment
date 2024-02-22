@@ -44,3 +44,4 @@
 - MVVM architecture is being used
 - ViewModel accepts actions and modifies its state. No external modifications are allowed.
 - For real app i would add swiftlint and code generation tools for licalized strings and resources (swiwtgen or r.swift)
+- For real app i would implement proper design system with all fonts and colors

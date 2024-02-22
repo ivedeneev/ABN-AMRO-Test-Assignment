@@ -13,5 +13,7 @@ enum Constants {
         
         /// Horizontal padding for `ListView`
         static let listViewHPadding: Double = 20
+        
+        static let markerSize: Double = 40
     }
 }

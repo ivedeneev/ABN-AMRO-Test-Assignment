@@ -23,18 +23,33 @@ struct MapView: View {
 
     var body: some View {
         MapReader { reader in
-            Map(position: $position, selection: $selectedLocation) {
+            Map(position: $position) {
                 if let selectedNewLocation {
                     Marker(LocalizedStringKey("Map.NewLocaton"), coordinate: selectedNewLocation)
                         .tint(.indigo)
                 }
                 
                 ForEach(viewModel.locations) { location in
-                    Marker(coordinate: location.coordinate) {
-                        Text(location.safeName)
+                    Annotation("", coordinate: location.coordinate) {
+                        VStack {
+                            Image(systemName: "mappin.circle.fill")
+                                .resizable()
+                                .frame(width: Constants.UI.markerSize, height: Constants.UI.markerSize)
+                                .foregroundStyle(Color(UIColor.systemRed))
+                                .background(
+                                    Color.white
+                                        .clipShape(RoundedRectangle(cornerRadius: Constants.UI.markerSize / 2))
+                                )
+                            
+                            Text(location.safeName)
+                                .padding(4)
+                                .background(.thickMaterial)
+                                .clipShape(RoundedRectangle(cornerRadius: 4))
+                        }
+                        .onLongPressGesture(minimumDuration: .zero, maximumDistance: .zero) { // see comment below
+                            selectedLocation = location
+                        }
                     }
-                    .tag(location)
-                    .mapOverlayLevel(level: .aboveLabels)
                 }
             }
             .onTapGesture { screenCoord in
@@ -43,7 +58,7 @@ struct MapView: View {
                      selectedNewLocation = pinLocation
                  }
             }
-            // Unfortunately, this overlaps with Marker tap gestures and causes a minor visual glitch (see https://stackoverflow.com/questions/74675989/how-to-have-ontap-gestures-on-map-and-mapannotation-both-without-the-two-interf)
+            // Unfortunately, this overlaps with Marker tap gestures and causes a minor visual glitch. Eventually i decided not to use standard markers for both saved locations and new ones (see https://stackoverflow.com/questions/74675989/how-to-have-ontap-gestures-on-map-and-mapannotation-both-without-the-two-interf)
             .onMapCameraChange(frequency: .onEnd) { context in
                 lastCameraPosition = context.camera.centerCoordinate
             }
